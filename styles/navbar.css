@@ -1,0 +1,117 @@
+.mybtn {
+    /* height: 3.5em; */
+    /* width: 14rem; */
+    /* margin: 0em .7em; */
+    -moz-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    /* background: rgba(255, 255, 255, 0.2); */
+    color: #111;
+    box-shadow: 0 0 .25rem 0 rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(135deg, #00f5, #5cf5);
+    text-decoration: none;
+    /* text-align: center; */
+    /* justify-content: center; */
+    letter-spacing: .2em;
+    border-radius: 1rem;
+    width: max-content;
+    max-width: 17rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    
+    /* width: fit-content; */
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    line-height: 1.5rem;
+    display:inline-flex;
+    /* padding: auto; */
+    /* text-indent: .2em; */
+    /* box-sizing: content-box; */
+    /* align-content: center; */
+    /* margin: 0% 20%; */
+    /* padding: auto !important; */
+  }
+  
+.mybtn:hover {
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    /* font-weight: ; */
+    /* color: #999; */
+    box-shadow: 0.3rem 0.3rem 0.7rem 0rem #0008, -0.2rem -0.2rem 0.6rem 0rem #0056;
+    /* font-size: 1.02rem; */
+    z-index: 1000;
+    /* background: #fff5; */
+    background: linear-gradient(135deg, #5cf5, #00f5);
+  }
+  
+  .mybtn.active {
+    box-shadow: 0.4rem 0.4rem 0.7rem 0rem #535a, -0.2rem -0.2rem 0.4rem 0rem #7499;
+    /* font-size: 1.02rem; */
+    z-index: 1000;
+    /* background: #fff5; */
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    transition: 0.4s ease-in;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem #636e,
+      inset -0.2rem -0.2rem 0.5rem #e9ec,
+      0.2rem 0.2rem 0.3rem 0 #636a, -0.1rem -0.1rem 1rem #5056;
+  }
+  .navbg {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(
+      circle,
+      rgba(63, 94, 251, 1) 0%,
+      rgba(252, 70, 107, 1) 100%
+    );
+    background: rgb(224, 220, 226);
+    background: linear-gradient(
+      90deg,
+      rgba(224, 220, 226, 1) 0%,
+      rgba(146, 183, 226, 1) 30%,
+      rgba(143, 196, 199, 1) 50%,
+      rgba(146, 183, 226, 1) 70%,
+      rgba(224, 220, 226, 1) 100%
+    );
+    background-color: #accbee;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+
+  }
+
+  .mymenubtn{
+    background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+  }
+  .mymenubtn-active{
+    color:#000;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+
+  }
+  
+  .mynav{
+    z-index: 90;
+    backdrop-filter: blur(15px);
+    -moz-backdrop-filter: blur(15px);
+    /* border-bottom: 1px #fff2 solid ; */
+    /* box-shadow: inset 0 0 1rem 0.1rem #ddd8; */
+    box-shadow: 0 0 .5rem 0rem #0008;
+  }
+  
+  .gradient{
+    background-image: linear-gradient(to right, #eea2a230 0%, #bbc1bf30 19%, #57c6e130 42%, #b49fda30 79%, #7ac5d830 100%);
+  }
+
+  .gradient2{
+    background-image: linear-gradient(to right, #eea2a260 0%, #bbc1bf60 19%, #57c6e160 42%, #b49fda60 79%, #7ac5d860 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+ background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+ background-image: linear-gradient(to right, #6a11cb30 0%, #2575fc30 100%);
+ background-image: linear-gradient(to right, #4facfe30 0%, #00f2fe30 100%);
+ background-color: #7f5a83;
+background-image: linear-gradient(315deg, #7f5a8330 0%, #0d324d30 74%);
+/* background-color: #2a2a72; */
+background-image: linear-gradient(315deg, #2a2a7230 0%, #009ffd30 74%);
+
+  }

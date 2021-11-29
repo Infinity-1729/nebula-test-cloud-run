@@ -1,0 +1,139 @@
+.responsive #slider [type="radio"] {
+    display: none;
+  }
+  .responsive{
+    /* height:min(calc(100vh - 100px),calc(calc(100vw - 15px) * 9/16));
+    width:min(calc(100%), calc( calc(100vh -100px) * 16/9 )); */
+    height:calc(100vw * 0.8);
+    /* height: calc(100vh - 100px); */
+    max-height:calc(100vh - 6.5rem);
+    width:100%;
+    max-width: calc((100vh -6.5rem )* 16/9);
+    margin: auto;
+    /* margin-top: 100px; */
+    display: block;
+    /* overflow-x: hidden; */
+    /* overflow-y: visible; */
+  }
+  label{
+    z-index: 999;
+  }
+  .responsive #slider {
+    /* margin-top: 1.4%; */
+    /* border: 1px red solid; */
+    height: 94%;
+    position: relative;
+    perspective: 80vw;
+    /* -webkit-transform-style: preserve-3d; */
+    /* -moz-transform-style: preserve-3d; */
+    transform-style: preserve-3d;
+    pointer-events: none;
+  }
+  
+  .responsive #slider label {
+    /* border: 1px red solid; */
+    margin: auto;
+    width: 65%;
+    height: 100%;
+    border-radius: .7rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:6%;
+    bottom: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    background-size: auto 115%;
+    background-position: 0 1%;
+    pointer-events: all;
+  }
+  
+  .responsive #s1:checked ~ #slide4,
+  .responsive #s2:checked ~ #slide5,
+  .responsive #s3:checked ~ #slide1,
+  .responsive #s4:checked ~ #slide2,
+  .responsive #s5:checked ~ #slide3 {
+    box-shadow: 0 .1rem 1rem 0 rgba(0, 0, 0, 0.37);
+    /* -webkit-transform: translate3d(-50%, 0, -30vw); */
+    /* -moz-transform: translate3d(-50%, 0, -30vw); */
+    transform: translate3d(-50%, 0, -30vw);
+  }
+  
+  .responsive #s1:checked ~ #slide5,
+  .responsive #s2:checked ~ #slide1,
+  .responsive #s3:checked ~ #slide2,
+  .responsive #s4:checked ~ #slide3,
+  .responsive #s5:checked ~ #slide4 {
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, 0.3), 0 .5rem .5rem 0 rgba(0, 0, 0, 0.2);
+    /* -webkit-transform: translate3d(-25%, 0, -15vw); */
+    /* -moz-transform: translate3d(-25%, 0, -15vw); */
+    transform: translate3d(-25%, 0, -15vw);
+  }
+  
+  .responsive #s1:checked ~ #slide1,
+  .responsive #s2:checked ~ #slide2,
+  .responsive #s3:checked ~ #slide3,
+  .responsive #s4:checked ~ #slide4,
+  .responsive #s5:checked ~ #slide5 {
+    box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.3), 0 1.5rem 1rem 0 rgba(0, 0, 0, 0.19);
+    /* -webkit-transform: translate3d(0, 0, 0); */
+    /* -moz-transform: translate3d(0, 0, 0); */
+    transform: translate3d(0, 0, 0);
+    animation: 8s ease-in-out 0.5s infinite slideInFromLeft;
+  }
+  
+  .responsive #s1:checked ~ #slide2,
+  .responsive #s2:checked ~ #slide3,
+  .responsive #s3:checked ~ #slide4,
+  .responsive #s4:checked ~ #slide5,
+  .responsive #s5:checked ~ #slide1 {
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, 0.3), 0 .5rem .5rem 0 rgba(0, 0, 0, 0.2);
+    /* -webkit-transform: translate3d(25%, 0, -15vw); */
+    /* -moz-transform: translate3d(25%, 0, -15vw); */
+    transform: translate3d(25%, 0, -15vw);
+  }
+  
+  .responsive #s1:checked ~ #slide3,
+  .responsive #s2:checked ~ #slide4,
+  .responsive #s3:checked ~ #slide5,
+  .responsive #s4:checked ~ #slide1,
+  .responsive #s5:checked ~ #slide2 {
+    box-shadow: 0 .1rem 1rem 0 rgba(0, 0, 0, 0.37);
+    /* -webkit-transform: translate3d(50%, 0, -30vw); */
+    /* -moz-transform: translate3d(50%, 0, -30vw); */
+    transform: translate3d(50%, 0, -30vw);
+  }
+  
+  .responsive #slide1 {
+    background-image: url(/slide-1.jpg);
+  }
+  .responsive #slide2 {
+    background-image: url(/slide-2.jpg);
+  }
+  .responsive #slide3 {
+    background-image: url(/slide-3.jpg);
+  }
+  .responsive #slide4 {
+    background-image: url(/slide-4.jpg);
+  }
+  .responsive #slide5 {
+    background-image: url(/slide-5.jpg);
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      background-position: 0 1%;
+    }
+    45% {
+      background-position: 100% 1%;
+    }
+    55% {
+      background-position: 100% 98%;
+    }
+    95% {
+      background-position: 0 98%;
+    }
+    100% {
+      background-position: 0 1%;
+    }
+  }

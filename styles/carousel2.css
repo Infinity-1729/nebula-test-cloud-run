@@ -1,0 +1,117 @@
+.responsive #slider [type="radio"] {
+    display: none;
+  }
+  .responsive{
+    height:calc(100vw * 0.8);
+    max-height:calc(100vh - 6.5rem);
+    width:100%;
+    max-width: calc((100vh -6.5rem )* 16/9);
+    margin: auto;
+    display: block;
+    overflow-x: hidden;
+  }
+  .responsive #kslider {
+    height: 94%;
+    position: relative;
+    perspective: 80vw;
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    pointer-events: none;
+  }
+  
+  .responsive #kslider div {
+    margin: auto;
+    width: 65%;
+    height: 100%;
+    border-radius: .7rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:6%;
+    bottom: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    background-size: auto 115%;
+    background-position: 0 1%;
+    pointer-events: all;
+  }
+  
+  .responsive #ks1.active ~ #kslide4,
+  .responsive #ks2.active ~ #kslide5,
+  .responsive #ks3.active ~ #kslide1,
+  .responsive #ks4.active ~ #kslide2,
+  .responsive #ks5.active ~ #kslide3 {
+    box-shadow: 0 .1rem 1rem 0 rgba(0, 0, 0, 0.37);
+    transform: translate3d(-50%, 0, -30vw);
+  }
+  
+  .responsive #ks1.active ~ #kslide5,
+  .responsive #ks2.active ~ #kslide1,
+  .responsive #ks3.active ~ #kslide2,
+  .responsive #ks4.active ~ #kslide3,
+  .responsive #ks5.active ~ #kslide4 {
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, 0.3), 0 .5rem .5rem 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(-25%, 0, -15vw);
+  }
+  
+  .responsive #ks1.active ~ #kslide1,
+  .responsive #ks2.active ~ #kslide2,
+  .responsive #ks3.active ~ #kslide3,
+  .responsive #ks4.active ~ #kslide4,
+  .responsive #ks5.active ~ #kslide5 {
+    box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.3), 0 1.5rem 1rem 0 rgba(0, 0, 0, 0.19);
+    transform: translate3d(0, 0, 0);
+    animation: 8s ease-in-out 0.5s infinite slideInFromLeft;
+  }
+  
+  .responsive #ks1.active ~ #kslide2,
+  .responsive #ks2.active ~ #kslide3,
+  .responsive #ks3.active ~ #kslide4,
+  .responsive #ks4.active ~ #kslide5,
+  .responsive #ks5.active ~ #kslide1 {
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, 0.3), 0 .5rem .5rem 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(25%, 0, -15vw);
+  }
+  
+  .responsive #ks1.active ~ #kslide3,
+  .responsive #ks2.active ~ #kslide4,
+  .responsive #ks3.active ~ #kslide5,
+  .responsive #ks4.active ~ #kslide1,
+  .responsive #ks5.active ~ #kslide2 {
+    box-shadow: 0 .1rem 1rem 0 rgba(0, 0, 0, 0.37);
+    transform: translate3d(50%, 0, -30vw);
+  }
+  
+  .responsive #kslide1 {
+    background-image: url(/slide-1.jpg);
+  }
+  .responsive #kslide2 {
+    background-image: url(/slide-2.jpg);
+  }
+  .responsive #kslide3 {
+    background-image: url(/slide-3.jpg);
+  }
+  .responsive #kslide4 {
+    background-image: url(/slide-4.jpg);
+  }
+  .responsive #kslide5 {
+    background-image: url(/slide-5.jpg);
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      background-position: 0 1%;
+    }
+    45% {
+      background-position: 100% 1%;
+    }
+    55% {
+      background-position: 100% 98%;
+    }
+    95% {
+      background-position: 0 98%;
+    }
+    100% {
+      background-position: 0 1%;
+    }
+  }
